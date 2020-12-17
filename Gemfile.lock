@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     secrets (0.1.0)
-      dotenv
       thor
 
 GEM
@@ -68,6 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
+  dotenv (~> 2.7.6)
   guard-rspec
   pry-byebug
   rake (~> 13.0)

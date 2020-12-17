@@ -1,18 +1,10 @@
 # frozen_string_literal: true
 
-require "dotenv"
-# TODO document this dotenv settings load
-Dotenv.load ".env.#{ENV["APP_ENV"]}.local",
-            ".env.local",
-            ".env.#{ENV["APP_ENV"]}",
-            ".env"
-
 require_relative "secrets/secret"
 require_relative "secrets/version"
 
-
 #
-# Secrets provides a simple way to use encryption/encoding on Stirngs.
+# Secrets provides a simple way to use encryption/encoding on Strings.
 #
 module Secrets
   module_function

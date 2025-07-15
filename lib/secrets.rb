@@ -25,9 +25,9 @@ module Secrets
   end
 
   # :reek:ManualDispatch
-  def method_missing(method_name, *args, &block)
+  def method_missing(method_name, *args, **kwargs, &block)
     if default_secret.respond_to?(method_name)
-      default_secret.public_send method_name, *args, &block
+      default_secret.public_send method_name, *args, **kwargs, &block
     else
       super
     end

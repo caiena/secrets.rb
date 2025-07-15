@@ -17,7 +17,7 @@ module Secrets
   end
 
   def default_secret
-    @default_secret ||= Secret.new ENV.fetch("SECRET_KEY")
+    @default_secret ||= ENV.key?("SECRET_KEY") ? Secret.new(ENV.fetch("SECRET_KEY")) : nil
   end
 
   def default_secret=(secret)

@@ -97,8 +97,8 @@ module Secrets
     end
     alias hash! hashify!
 
-    def hashify(*args)
-      hashify! *args rescue nil
+    def hashify(...)
+      hashify!(...) rescue nil
     end
     alias hash hashify
 
@@ -114,8 +114,8 @@ module Secrets
       Base64Util.encode encrypted
     end
 
-    def encrypt(*args)
-      encrypt! *args rescue nil
+    def encrypt(...)
+      encrypt!(...) rescue nil
     end
 
     # "decrypts" an encrypted value.
@@ -131,8 +131,8 @@ module Secrets
       unwrap_message(wrapped, salt: salt, pepper: pepper)
     end
 
-    def decrypt(*args)
-      decrypt! *args rescue nil
+    def decrypt(...)
+      decrypt!(...) rescue nil
     end
 
     # :reek:UtilityFunction

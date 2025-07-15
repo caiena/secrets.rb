@@ -32,6 +32,8 @@ guard :rspec, cmd: "bin/rspec" do
 
   # Feel free to open issues for suggestions and improvements
 
+  notification :off
+
   # RSpec files
   rspec = dsl.rspec
   watch(rspec.spec_helper) { rspec.spec_dir }
